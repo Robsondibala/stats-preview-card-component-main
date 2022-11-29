@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(233, 47%, 7%);
+}
+.card{
+    display: flex;
+    padding: 10px;
+}
+/* card_texts */
+.card_texts{
+    max-width: 500px;
+    width: 100%;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px 0 0 10px;
+    color: hsl(0, 0%, 100%);
+    padding: 65px;
+}
+.card_texts h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.card_texts span{
+    color: hsl(277, 64%, 61%);
+}
+.card_texts p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.1rem;
+}
+
+/* stats */
+.stats{
+    display: flex;
+    gap: 50px;
+    margin-top: 60px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.stats h2{
+    font-size: 1.4rem;
+    letter-spacing: .6px;
+    margin-bottom: 3px;
+}
+.stats p{
+    font-size: 1rem;
+}
+
+
+
+/* card_image */
+.card_image{
+    max-width: 500px;
+    width: 100%;
+    background-color: hsl(278, 75%, 34%);
+    border-radius: 0 10px 10px 0;
+}
+.card_image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    opacity: .5;
+}
+
+
+/* media queries  */
+@media(max-width: 1000px ){
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card_texts{
+        border-radius: 0 0 10px 10px;
+        padding: 15px;
+        text-align: center;
+    }
+    .card_image img{
+        border-radius: 10px 10px 0 0;
+    }
+    .card_image{
+        border-radius: 10px 10px 0 0;
+    }
+    .stats{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 500px ){
+    .card_texts h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .card_texts p{
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 1rem;
+        line-height: 30px;
+        letter-spacing: .3px;
+    }
+    .stats{
+        display: flex;
+        gap: 50px;
+        margin-top: 60px;
+        flex-direction: column;
+    }
+    
+}
